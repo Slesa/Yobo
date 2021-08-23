@@ -95,7 +95,7 @@ Target.create "PublishDbMigrations" (fun  _ ->
 )
 
 Target.create "RunDbMigrations" (fun _ ->
-    let connString = "..\Yobo.Private\ConnectionString.txt" |> File.readAsString
+    let connString = "./src/Yobo.Private/ConnectionString.txt" |> File.readAsString
     let cmd = sprintf "run \"%s\" \"%s\" " connString (migrationsDeployPath |> Path.getFullName)
     Tools.dotnet cmd migrationsSrcPath
 )

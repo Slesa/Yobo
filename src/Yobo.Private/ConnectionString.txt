@@ -1,0 +1,1 @@
+Server=127.0.0.1,1401; Database=Master; User Id=SA; Password=fickdich
